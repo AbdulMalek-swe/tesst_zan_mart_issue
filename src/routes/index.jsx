@@ -30,12 +30,7 @@ import EditProductVariant from "../pages/productVariant/productvariant/edit";
 import CategoryHomepage from "../pages/category/category-to-homepage";
 import { ProductEdit } from "../pages/products/edit";
 import OrderDetails from "../pages/Orders/order-detail";
-import OrderTracking from "../pages/Orders/order-tracking";
-import Banner from "../pages/Banner/index";
-import { BannerCreate } from "../pages/Banner/create";
-import { BannerEdit } from "../pages/Banner/edit";
-import BannerWayProduct from "../pages/Banner/banner-way-product";
-import BannerWayProductCreate from "../pages/Banner/banner-way-product/create";
+import OrderTracking from "../pages/Orders/order-tracking";  
 import Form from "../pages/form";
 
 
@@ -71,12 +66,7 @@ const appRoutes = [
       { path: "orders", element: <Orders></Orders> },
       { path: "product-variant", element: <ProductVariant /> },
       { path: "product-variant/create", element: <ProductVariantCreate /> },
-      { path: "product-variant/edit/:id", element: <EditProductVariant /> },
-      { path: "banner", element: <Banner /> },
-      { path: "banner/create", element: <BannerCreate/> },
-      { path: "banner/edit/:id", element: <BannerEdit /> },
-      { path: "banner/banner-product/:id", element: <BannerWayProduct /> },
-      { path: "banner/featured/:id", element: <BannerWayProductCreate /> },
+      { path: "product-variant/edit/:id", element: <EditProductVariant /> }, 
       { path: "category", element: <Category /> },
       { path: "category/create", element: <CategoryCreate /> },
       { path: "category/edit/:id", element: <CategoryEdit /> },
@@ -103,6 +93,7 @@ export const permittedRoutes = () => {
   const token = getToken();
 
   if (token) {
+    console.log(token)
     return appRoutes;
   }
 
